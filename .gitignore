@@ -24,3 +24,8 @@ checkpoints/**
 # OS System Files
 .DS_Store
 Thumbs.db
+
+# Editor Server Caches
+.cursor-server/
+.vscode-server/
+.windsurf-server/
