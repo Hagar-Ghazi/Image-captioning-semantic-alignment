@@ -1,0 +1,26 @@
+# Lightning.ai Studio System Files
+.lightning_studio/
+.lightning/
+.lightning_studio**
+
+# Streamlit Configuration
+.streamlit/
+
+# Datasets
+data/
+data/**
+
+# PyTorch Checkpoints & Trained Weights
+checkpoints/
+checkpoints/**
+*.pt
+*.pth
+
+# Python Compilation Cache
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# OS System Files
+.DS_Store
+Thumbs.db
