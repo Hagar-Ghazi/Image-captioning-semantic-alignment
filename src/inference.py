@@ -50,7 +50,6 @@ def generate_caption(image, model, processor, device=config.DEVICE):
     return caption.capitalize()
 
 
-
 # ----------------- Custom Model Similarity Matcher -----------------
 
 def load_custom_clip_model(device=config.DEVICE):
@@ -80,6 +79,10 @@ def compute_custom_similarities(image, texts, model, tokenizer, device=config.DE
     Computes similarities between an image and a list of text captions using our custom model.
     Uses the exact formula: logits = dot(I_e, T_e.T) * exp(t) followed by softmax.
     """
+    # Ensure image is in RGB (strips alpha channel if PNG)
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+        
     # Prepare image
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
@@ -116,7 +119,6 @@ def compute_custom_similarities(image, texts, model, tokenizer, device=config.DE
         cosine_sim = torch.matmul(I_e, T_e.t()).squeeze(0).cpu().numpy()
         
     return probabilities, cosine_sim
-
 
 
 # ----------------- Pre-trained HF CLIP Matcher (Fallback) -----------------
