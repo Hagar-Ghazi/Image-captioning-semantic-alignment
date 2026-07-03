@@ -1,4 +1,6 @@
-# Professional Image Captioning and Cross-Modal Semantic Alignment
+# 🔮 Professional Image Captioning and Cross-Modal Semantic Alignment
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://image-captioning-semantic-alignment-icsrycmspweemhye9sqnpr.streamlit.app/)
 
 A professional, high-performance vision-language system featuring a custom CLIP-style (ViT + BERT) contrastive alignment model and a state-of-the-art BLIP generative captioner built with an interactive dark-themed Streamlit web interface. 
 
